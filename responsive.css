@@ -1,0 +1,583 @@
+/* Estilos responsivos para el sistema de pedidos */
+
+/* Variables globales */
+:root {
+  --primary-color: #4caf50;
+  --primary-hover: #45a049;
+  --secondary-color: #f1f1f1;
+  --secondary-hover: #e7e7e7;
+  --danger-color: #f44336;
+  --danger-hover: #d32f2f;
+  --info-color: #2196f3;
+  --info-hover: #0b7dda;
+  --warning-color: #ff9800;
+  --text-color: #333;
+  --light-text: #666;
+  --border-color: #ddd;
+  --background-color: #f5f5f5;
+  --card-background: #fff;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --border-radius: 4px;
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 30px;
+}
+
+/* Reset y estilos base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+
+/* Contenedor principal */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Encabezado y navegación */
+header {
+  background-color: var(--card-background);
+  box-shadow: var(--shadow);
+  padding: var(--spacing-md) 0;
+  margin-bottom: var(--spacing-lg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  background-color: var(--secondary-color);
+}
+
+nav a.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Contenido principal */
+main {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+  color: var(--text-color);
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--border-color);
+}
+
+h3 {
+  color: var(--light-text);
+  margin: var(--spacing-md) 0;
+}
+
+/* Formularios */
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.form-actions {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+/* Botones */
+button,
+.btn-primary,
+.btn-secondary,
+.btn-danger,
+.btn-info,
+.btn-warning {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-hover);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: var(--danger-hover);
+}
+
+.btn-info {
+  background-color: var(--info-color);
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: var(--info-hover);
+}
+
+.btn-warning {
+  background-color: var(--warning-color);
+  color: white;
+}
+
+.btn-small {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.875rem;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--spacing-lg);
+  table-layout: fixed;
+}
+
+th,
+td {
+  padding: var(--spacing-sm) var(--spacing-xs);
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}
+
+/* Tarjetas */
+.card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Alertas */
+.alert {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--border-radius);
+}
+
+.alert.success {
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+}
+
+.alert.error {
+  background-color: #f2dede;
+  color: #a94442;
+  border: 1px solid #ebccd1;
+}
+
+/* Badges */
+.status-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+}
+
+.status-badge.paid {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.status-badge.pending {
+  background-color: var(--warning-color);
+  color: white;
+}
+
+/* Productos */
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--spacing-lg);
+}
+
+.product-price {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.product-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.product-quantity {
+  width: 60px;
+  padding: var(--spacing-xs);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.product-variable-select {
+  padding: var(--spacing-xs);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.product-specs {
+  width: 100%;
+  padding: var(--spacing-xs);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.btn-add-product {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-add-product:hover {
+  background-color: var(--primary-hover);
+}
+
+.cart-variables {
+  font-size: 0.875rem;
+  color: var(--light-text);
+  margin-top: var(--spacing-xs);
+}
+
+/* Filtros */
+.filters {
+  background-color: #f8f8f8;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-lg);
+}
+
+.filters form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  align-items: flex-end;
+}
+
+.filter-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+/* Encabezados de sección */
+.page-header,
+.order-header,
+.orders-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  gap: var(--spacing-sm);
+}
+
+.order-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+/* Detalles de pedido */
+.order-details {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+}
+
+/* Menú móvil */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+}
+
+/* Estilos para impresión */
+@media print {
+  header,
+  nav,
+  .form-actions,
+  .back-link,
+  .no-print {
+    display: none;
+  }
+
+  body,
+  main {
+    background: white;
+    color: black;
+    font-size: 12pt;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+
+  main {
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+/* Media Queries para Responsividad */
+@media (min-width: 768px) {
+  .order-details {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  header h1 {
+    font-size: 1.25rem;
+  }
+
+  main {
+    padding: var(--spacing-md);
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: var(--spacing-sm);
+    text-align: center;
+  }
+
+  .page-header,
+  .order-header,
+  .orders-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button,
+  .form-actions a {
+    width: 100%;
+  }
+
+  /* Tablas responsivas */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid var(--border-color);
+    margin-bottom: var(--spacing-md);
+    border-radius: var(--border-radius);
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  td:last-child {
+    border-bottom: none;
+  }
+
+  td:before {
+    position: absolute;
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+    width: 45%;
+    padding-right: var(--spacing-sm);
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+    content: attr(data-label);
+  }
+
+  /* Ajustes específicos para tablas de productos */
+  .products-table td:before {
+    content: attr(data-label);
+  }
+
+  .product-actions {
+    justify-content: flex-end;
+  }
+
+  /* Filtros en móvil */
+  .filters form {
+    flex-direction: column;
+  }
+
+  .filter-group,
+  .filter-actions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --spacing-md: 10px;
+    --spacing-lg: 15px;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .btn-small {
+    padding: var(--spacing-xs) var(--spacing-xs);
+    font-size: 0.75rem;
+  }
+
+  .product-quantity {
+    width: 50px;
+  }
+}
+
